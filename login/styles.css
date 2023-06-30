@@ -1,0 +1,144 @@
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 600px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px 4px 0 0;
+    transition: background-color 0.3s ease-out;
+  }
+  
+  .tab:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #login-content {
+    display: block;
+  }
+  
+  #signup-content {
+    display: none;
+  }
+  
+  .active {
+    display: block;
+  }
+  
+  .heading {
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: neon-effect 1.5s linear infinite;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-out;
+    color: #fff;
+  }
+  
+  input::placeholder,
+  select::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  input:focus,
+  select:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f00;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out;
+  }
+  
+  .btn:hover {
+    background-color: #f33;
+  }
+  
+  /* Animations */
+  @keyframes neon-effect {
+    0% {
+      text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 40px #f33, 0 0 60px #f33, 0 0 80px #f33, 0 0 100px #f33, 0 0 120px #f33;
+    }
+    100% {
+      text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 40px #f00, 0 0 60px #f00, 0 0 80px #f00, 0 0 100px #f00, 0 0 120px #f00;
+    }
+  }
+  
+  @keyframes slide-up {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
